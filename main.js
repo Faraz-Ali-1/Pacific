@@ -1,6 +1,6 @@
 
 import products from "./API/products.json";
-import { ShowProductContainer } from "../E-shop/HomeProductCard";
+import { ShowProductContainer } from "./HomeProductCard.js";
 
 
 // getting data from products.json to display on the cards
