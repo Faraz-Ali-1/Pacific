@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Butcherman&family=Croissant+One&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Orbitron:wght@400..900&family=Pacifico&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./public/logo 3.png">
+
+  <title>Cart</title>
+
+  <style>
+    :root{
+    --white: white;
+    --grey: rgb(50, 50, 50);
+    --main-theme: rgba(55,71,114,255); /* #374772 */
+    --accent-color: ;
+}
+.main-section{
+    min-width: 880px;
+    margin: 5rem auto;
+}
+.productTemplate-atc{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 0.4rem;
+  max-width: 70rem;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.category-atcContainer{
+  min-width: 1rem;
+  width: 8rem;
+}
+.category-atc{
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    color: rgb(40, 40, 40);
+    background-color: #cadcff;
+    border-radius: 4rem;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    margin-right: 2rem;
+}
+.productImg-atc{
+    text-align: center;
+}
+.image-atc{
+    width: 4rem;
+    height: 4rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    object-fit: cover;
+    float: center;
+}
+.name-cnt{
+  min-width: 10rem;
+  width: 14rem;
+}
+.name-atc{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 5rem;
+}
+.discountedPrice-atcContainer{
+  max-width: 3rem;
+  min-width: 3rem;
+}
+.discountedPrice-atc{
+  color: rgb(100, 100, 100);
+  font-size: 0.9rem;
+}
+.quantityElem-atc{
+    display: grid;
+    height: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+    border: 1px solid rgb(200, 200, 200);
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 0.2rem;
+}
+.decrementBtn-atc, .incrementBtn-atc{
+    margin: 0rem;
+    padding: 0rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    transition: 0.1s;
+    height: 1.5rem;
+
+}
+.decrementBtn-atc{
+    border-right: 1px solid rgb(200, 200, 200);
+    border-radius: 0.2rem 0rem 0rem 0.2rem;
+}
+.incrementBtn-atc{
+    border-left: 1px solid rgb(200, 200, 200);
+    border-radius: 0rem 0.2rem 0.2rem 0rem;
+}
+.decrementBtn-atc:hover, .incrementBtn-atc:hover{
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+    
+}
+.quantityNumber-atc{
+    font-size: 1rem;
+    padding: 0 1.2rem;
+    margin: 0.3rem 0;
+    width: 0rem;
+}
+.RemoveBtn-atc{
+    color: white;
+    background-color: var(--main-theme);
+    border: 2px solid var(--main-theme);
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.4rem 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 10rem;
+}
+.RemoveBtn-atc:hover{
+    color: var(--main-theme);
+    border: 2px solid var(--main-theme);
+    background-color: white;
+    cursor: pointer;
+}
+
+/* ************* */
+/* cart checkout */
+/* ************* */
+
+.cart-chekcout{
+  max-width: 70rem;
+  min-width: 880px;
+  margin: auto;
+  /* display: flex; */
+  /* flex-direction: column; */
+  
+}
+.cartFlex{
+    display: flex;
+    justify-content: right;
+}
+.cartFlex p{
+  width: 10rem;
+}
+.amount{
+  text-align: right;
+}
+.light{
+  color: rgb(100, 100, 100);
+}
+.total p{
+  border-top: 1px solid black;
+  padding: 1.5rem 0rem;
+}
+
+.toast{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+  animation: toast 0.5s ease-in-out;
+}
+
+@keyframes toast {
+  from {
+    opacity: 0;
+    transform: translatex(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+/* ************* */
+/* cart checkout */
+/* ************* */
+
+</style>
+
+</head>
+<body>
+  
+  <!-- ----------------- -->
+  <!-- offer starts here -->
+  <!-- ----------------- -->
+
+  <div class="offer-container">
+    <p class="offer"><i class="fa-solid fa-tag"></i> Enjoy FREE Delivery on all orders! No minimum purchase required. Order now and save on shipping! <i class="fa-solid fa-tag"></i></p>
+  </div>
+
+  <!-- --------------- -->
+  <!-- offer ends here -->
+  <!-- --------------- -->
+
+  <!-- ------------------ -->
+  <!-- header starts here -->
+  <!-- ------------------ -->
+
+  <header>
+    <div class="header-container">
+
+      <div class="logo">
+        <a href="index.html" class="logo-link"><img src="./public/logo 4 rmv.png" alt="logo"></a>
+      </div>
+
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Products.html">PRODUCTS</a></li>
+            <li><a href="Contact Us.html">CONTACT US</a></li>
+            <button><a href="addToCartPage.html">
+              <i class="fa-solid fa-cart-shopping"> <sup id="cartValue"></sup></i>
+            </a></button>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ------------------------ -->
+  <!-- main section starts here -->
+  <!-- ------------------------ -->
+
+  <section class="main-section">
+    <section class="sub-section">
+      <div class="add-to-cart-container" id="atcContainer">
+
+      </div>
+    </section>
+  </section>
+
+  <!-- ------------------------------ -->
+  <!-- template for items in the cart -->
+  <!-- ------------------------------ -->
+
+   <template id="templateAtc">
+    <div id="cardValue">
+      <article id="productTemplate" class="productTemplate-atc">
+        <div class="category-atcContainer">
+          <span id="category" class="category-atc"></span>
+        </div>
+
+        <div id="productImg" class="productImg-atc">
+          <img src="" alt="" id="image" class="image-atc">
+        </div>
+
+        <div class="name-cnt">
+          <h2 id="name" class="name-atc"></h2>
+        </div>
+
+        <div class="discountedPrice-atcContainer">
+          <p id="discountedPrice" class="discountedPrice-atc"></p>
+        </div>
+
+        <div id="quantityElem" class="quantityElem-atc">
+          <button id="decrementBtn" class="decrementBtn-atc">−</button>
+          <p id="quantityNumber" class="quantityNumber-atc">1</p>
+          <button id="incrementBtn" class="incrementBtn-atc">+</button>
+        </div>
+
+        <div>
+          <button id="RemoveBtn" class="RemoveBtn-atc">REMOVE</button>  
+        </div>
+      </article>
+    </div>
+   </template>
+
+  <!-- ------------------------------ -->
+  <!-- template for items in the cart -->
+  <!-- ------------------------------ -->
+
+  <!-- ---------------------- -->
+  <!-- main section ends here -->
+  <!-- ---------------------- -->
+
+  <!-- ---------------------------- -->
+  <!-- cart grand total starts here -->
+  <!-- ---------------------------- -->
+
+    <article class="cart-chekcout">
+      <div class="subtotal cartFlex">
+        <div><p class="light">Subtotal</p></div>
+        <div><p class="amount light" id="subtotal"></p></div>
+      </div>
+
+      <div class="discount cartFlex">
+        <div><p class="light">Discount</p></div>
+        <div><p class="amount light" id="discount"></p></div>
+      </div>
+
+      <div class="total cartFlex">
+        <div><p class="total">Total</p></div>
+        <div><p class="amount" id="gtotal"></p></div>
+      </div>
+    </article>
+
+  <!-- -------------------------- -->
+  <!-- cart grand total ends here -->
+  <!-- -------------------------- -->
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="public/footer_logo-rmv.png" class="logo" alt="logo">
+        <p>At Pacific, we're more than just an online store; we're a community dedicated to bringing you the best in everything. Explore our collections and find items that truly resonate with you.</p>
+        <img src="public/payment-rmv.png" class="payment" alt="payment">
+      </div>
+      <div class="footer-right">
+        <div class="shopping">
+          <h3>SHOPPING</h3>
+          <a href="#"><p>Men</p></a>
+          <a href="#"><p>Women</p></a>
+          <a href="#"><p>Kids</p></a>
+          <a href="#"><p>Offers</p></a>
+        </div>
+        <div class="about">
+          <h3>ABOUT</h3>
+          <a href="#"><p>Contact Us</p></a>
+          <a href="#"><p>About Us</p></a>
+          <a href="#"><p>Return Policy</p></a>
+          <a href="#"><p>Shipping policy</p></a>
+        </div>
+        <div class="newsletter">
+          <h3>NEWSLETTER</h3>
+          <p>Don't miss out! Sign up for our newsletter to get the latest deals, exclusive discounts, and new product alerts delivered straight to your inbox. Be the first to know and save!</p>
+          <form action="submit">
+            <input type="email" placeholder="" name="newsletter" required>
+            <button type="submit"><span>➔</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="showAddToCart.js"></script>
+  <script type="module" src="main.js"></script>
+  
+</body>
+</html>

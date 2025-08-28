@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Butcherman&family=Croissant+One&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Orbitron:wght@400..900&family=Pacifico&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="./public/logo 3.png">
+
+  <title>Contact Us</title>
+
+  <style>
+
+:root{
+    --white: white;
+    --grey: rgb(50, 50, 50);
+    --main-theme: rgba(55,71,114,255); /* #374772 */
+    --accent-color: ;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: roboto, sans-serif;
+}
+
+/* ***************** */
+/* offer starts here */
+/* ***************** */
+
+.offer-container{
+    background-color: rgb(218, 218, 218);
+    min-width: 910px;
+}
+.fa-tag{
+    color: rgba(55,71,114,255);
+    animation: focus 2s infinite linear;
+}
+.offer{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgba(55,71,114,255);
+    margin: auto;
+    padding: 0.2rem 0;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: textSlide 50s infinite linear;
+}
+@keyframes textSlide {
+    0%{margin-left: -37rem; text-align: left}
+    100%{margin-left: 90rem;}
+}
+
+/* *************** */
+/* offer ends here */
+/* *************** */
+
+/* ****************** */
+/* header starts here */
+/* ****************** */
+
+header{
+    max-width: 70rem;
+    min-width: 880px;
+    padding: 1rem 1rem;
+    margin: auto;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 11rem;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: baseline;
+    list-style: none;
+    gap: 1.2rem;
+}
+.navbar li>a{
+    color: var(--main-theme);
+    font-display: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.navbar button{
+    color: white;
+    background-color: var(--main-theme);
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    transition: 0.2s;
+}
+.navbar button a{
+    color: white;
+    text-decoration: none;
+}
+button i{
+    padding: 0.5rem 1.2rem;
+}
+.navbar li>a:hover{
+    color: rgb(94, 120, 192);
+}
+.navbar button:hover{
+    background-color: rgb(94, 120, 192);
+}
+
+/* **************** */
+/* header ends here */
+/* **************** */
+
+
+
+    .cont-main{
+        max-width: 1000px;
+        margin: auto;
+    }
+    .cont-section{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .cont-img{
+        width: 25rem;
+    }
+    .cont-info p{
+        text-wrap: wrap;
+        width: 29rem;
+        line-height: 1.5rem;
+        font-size: 1.1rem;
+        color: rgb(102, 102, 102);
+        text-align: justify;
+    }
+    .cont-heading{
+        /* margin-bottom: 0; */
+        text-align: left;
+        font-size: 3rem;
+        font-weight: 500;
+        color: var(--main-theme);
+    }
+
+    /* ************************* */
+    /* contact form starts here  */
+    /* ************************* */
+
+    .contactUs{
+        margin-top: 5rem;
+    }
+    .contact_form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+    h2{
+        color: var(--main-theme);
+        font-weight: 400;
+        font-size: 3rem;
+    }
+    label{
+        margin-bottom: .4rem;
+        color: rgb(100, 100, 100);
+        font-size: 1.1rem;
+    }
+    input{
+        margin-bottom: 2rem;
+        height: 2rem;
+        width: 50%;
+        font-size: 1rem;
+        padding: 0 .5rem;
+        outline: none;
+        border: 2px solid rgb(198, 198, 198);
+        transition: 0.2s;
+    }
+    input:hover{
+        background: rgb(243, 243, 243);
+    }
+    input:focus{
+        border: 2px solid var(--main-theme);
+        border-radius: 0.3rem;
+        transition: 0.2s;
+    }
+    textarea{
+        width: 50%;
+        font-size: 1rem;
+        padding: .5rem;
+        border: 2px solid rgb(198, 198, 198);
+    }
+    textarea:focus{
+        outline: none;
+        border: 2px solid var(--main-theme);
+        border-radius: 0.3rem;
+        transition: 0.2s;
+    }
+    .contactUs .contact_btn{
+        width: 52%;
+        margin: 3rem 0;
+        height: 2.5rem;
+        background-color: var(--main-theme);
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 0.1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .contactUs .contact_btn:hover{
+        color: var(--main-theme);
+        background-color: white;
+        border: 1px solid var(--main-theme);
+    }
+    .contactUs .contact_btn:active{
+        background-color: var(--main-theme);
+        transition: 0s;
+        color: white;
+    }
+
+
+
+
+/* ************************** */
+/* footer section starts here */
+/* ************************** */
+
+footer{
+    background-color: var(--main-theme);
+    min-width: 910px;
+}
+.footer-container{
+    max-width: 80rem;
+    padding: 3rem 2rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+.footer-left img.logo{
+    width: 20rem;
+    margin: 0;
+    padding: 0;
+}
+.footer-left img.payment{
+    width: 15rem;
+    margin-top: 2rem;
+}
+.footer-left p{
+    color: rgb(200, 200, 200);
+    font-size: 0.9rem;
+    margin: 0;
+}
+.footer-right{
+    display: flex;
+    gap: 4rem;
+}
+.footer-right h3{
+    color: white;
+    font-weight: 500;
+}
+.shopping a p, .about a p{
+    text-decoration: none;
+    color: rgb(200, 200, 200);
+    text-wrap: nowrap;
+    margin: 0.5rem 0;
+}
+.shopping p:hover, .about p:hover{
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.newsletter p{
+    color: rgb(200, 200, 200);
+    line-height: 150%;
+    font-size: 0.9rem;
+}
+.newsletter input{
+    width: 77%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 0.9rem;
+    color: white;
+    padding: 0.3rem 0.1rem;
+    background-color: transparent;
+    margin-top: 1rem;
+}
+.newsletter input:focus{
+    border-bottom: 1px solid white;
+    transition: 0.2s;
+}
+.newsletter .ftr_btn{
+    border: none;
+    border-radius: 0.1rem;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    height: 1.9rem;
+    padding: 0 0.5rem;
+    background-color: var(--grey);
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 1rem;
+}
+.newsletter .ftr_btn:hover{
+    color: var(--main-theme);
+    background-color: white;
+}
+
+/* ************************ */
+/* footer section ends here */
+/* ************************ */
+  </style>
+
+</head>
+<body>
+  
+  <!-- ----------------- -->
+  <!-- offer starts here -->
+  <!-- ----------------- -->
+
+  <div class="offer-container">
+    <p class="offer"><i class="fa-solid fa-tag"></i> Enjoy FREE Delivery on all orders! No minimum purchase required. Order now and save on shipping! <i class="fa-solid fa-tag"></i></p>
+  </div>
+
+  <!-- --------------- -->
+  <!-- offer ends here -->
+  <!-- --------------- -->
+
+  <!-- ------------------ -->
+  <!-- header starts here -->
+  <!-- ------------------ -->
+
+  <header>
+    <div class="header-container">
+
+      <div class="logo">
+        <a href="index.html" class="logo-link"><img src="./public/logo 4 rmv.png" alt="logo"></a>
+      </div>
+
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Products.html">PRODUCTS</a></li>
+            <li><a href="Contact Us.html">CONTACT US</a></li>
+            <button><a href="addToCartPage.html">
+              <i class="fa-solid fa-cart-shopping"> <sup id="cartValue"></sup></i>
+            </a></button>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ---------------- -->
+  <!-- header ends here -->
+  <!-- ---------------- -->
+
+  <!-- ------------------------- -->
+  <!-- main Scetion starts here  -->
+  <!-- ------------------------- -->
+
+  <main class="cont-main">
+    <section class="cont-section">
+        <div class="cont-image">
+            <img src="public/write.png" alt="a boy writing" class="cont-img">
+        </div>
+        <div class="cont-info">
+            <h1 class="cont-heading">Have questions? 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Just write to Us!</h1>
+            <p class="cont-para">We value your feedback and inquiries. If you have any questions, suggestions, or concerns, please don't hesitate to reach out to us. Our team is here to assist you and ensure you have the best experience possible. Feel free to contact us through the form below or via our social media channels. We look forward to hearing from you!</p>
+        </div>
+    </section>
+    
+    <br>
+    <br>
+    <hr>
+
+    <section class="contactUs">
+        <h2>Contact Us</h2>
+        <form action="submit" class="contact_form">
+            <label for="Name">Name</label>
+            <input type="text" id="Name" name="name" required>
+            <label for="Email">E-mail</label>
+            <input type="email" id="Email" name="email" required>
+            <label for="Message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+
+            <button class="contact_btn" type="submit">SUBMIT</button>
+        </form>
+        
+    </section>
+  </main>
+
+  <!-- ---------------------- -->
+  <!-- main section ends here -->
+  <!-- ---------------------- -->
+
+  <!-- -------------------------- -->
+  <!-- footer section starts here -->
+  <!-- -------------------------- -->
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="public/footer_logo-rmv.png" class="logo" alt="logo">
+        <p>At Pacific, we're more than just an online store; we're a community dedicated to bringing you the best in everything. Explore our collections and find items that truly resonate with you.</p>
+        <img src="public/payment-rmv.png" class="payment" alt="payment">
+      </div>
+      <div class="footer-right">
+        <div class="shopping">
+          <h3>SHOPPING</h3>
+          <a href="#"><p>Men</p></a>
+          <a href="#"><p>Women</p></a>
+          <a href="#"><p>Kids</p></a>
+          <a href="#"><p>Offers</p></a>
+        </div>
+        <div class="about">
+          <h3>ABOUT</h3>
+          <a href="#"><p>Contact Us</p></a>
+          <a href="#"><p>About Us</p></a>
+          <a href="#"><p>Return Policy</p></a>
+          <a href="#"><p>Shipping policy</p></a>
+        </div>
+        <div class="newsletter">
+          <h3>NEWSLETTER</h3>
+          <p>Don't miss out! Sign up for our newsletter to get the latest deals, exclusive discounts, and new product alerts delivered straight to your inbox. Be the first to know and save!</p>
+          <form action="submit">
+            <input type="email" placeholder="" name="newsletter" required>
+            <button type="submit" class="ftr_btn"><span>➔</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ------------------------- -->
+  <!-- footer sections ends here -->
+  <!-- ------------------------- -->
+
+
+  <!-- script for icons -->
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- script for icons -->
+
+
+  <!-- mainscript starts here -->
+
+  <script type="module" src="main.js"></script>
+
+  <!-- main script ends here -->
+
+</body>
+</html>
