@@ -1,5 +1,5 @@
 
-import products from "../E-shop/API/products.json";
+import products from "./API/products.json";
 import { ShowProductContainer } from "../E-shop/HomeProductCard";
 
 
