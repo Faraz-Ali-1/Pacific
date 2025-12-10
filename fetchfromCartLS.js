@@ -1,4 +1,4 @@
-import { getCartProductFromLS } from "./getCartProduct";
+import { getCartProductFromLS } from "./getCartProduct.js";
 
 export const fetchfromCartLS = (cardValue, discountedPrice) => {
     let cartProducts = getCartProductFromLS();
@@ -12,4 +12,5 @@ export const fetchfromCartLS = (cardValue, discountedPrice) => {
         price = Number(existingProduct.price.toFixed(2));
     }
     return {quantity, price};
+
 };
