@@ -1,8 +1,8 @@
 import products from "./API/products.JSON";
-import { fetchfromCartLS } from "./fetchfromCartLS";
-import { getCartProductFromLS } from "./getCartProduct";
-import { removeProduct } from "./removeProduct";
-import { updateCartProductTotal } from "./updateCartProductTotal";
+import { fetchfromCartLS } from "./fetchfromCartLS.js";
+import { getCartProductFromLS } from "./getCartProduct.js";
+import { removeProduct } from "./removeProduct.js";
+import { updateCartProductTotal } from "./updateCartProductTotal.js";
 
 let cartProducts = getCartProductFromLS();
 
@@ -48,4 +48,5 @@ showCartProducts();
 // -------------------------
 
 updateCartProductTotal();
+
 
