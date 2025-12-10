@@ -1,5 +1,5 @@
-import { addToCart } from "./addToCart";
-import { quantityToggle } from "./quantityToggle";
+import { addToCart } from "./addToCart.js";
+import { quantityToggle } from "./quantityToggle.js";
 
 const ProductsContainer = document.getElementById("products-container");
 const productTemplate = document.getElementById("template");
@@ -40,4 +40,5 @@ export const ShowProductContainer = (products) => {
         ProductsContainer.append(productClone);
 
     });
+
 };
