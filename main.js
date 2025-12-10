@@ -9,7 +9,12 @@ import { ShowProductContainer } from "./HomeProductCard.js";
 // 3. Define the path to your JSON data
 // *** IMPORTANT: Adjust this path if 'API' is inside another folder. 
 // Assuming main.js is at the root and API/products.json is relative to it:
-const PRODUCT_DATA_PATH = "/Pacific/API/products.json";
+
+const BASE_PATH = window.location.pathname.endsWith('/Pacific') 
+    ? window.location.pathname 
+    : window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+
+const PRODUCT_DATA_PATH = `${BASE_PATH}Pacific/API/products.json`;
 
 
 // 4. New: Create an async function to fetch data and render
