@@ -1,6 +1,6 @@
-import { getCartProductFromLS } from "./getCartProduct";
-import { showToast } from "./showToast";
-import { updateCartValue } from "./updateCartValue";
+import { getCartProductFromLS } from "./getCartProduct.js";
+import { showToast } from "./showToast.js";
+import { updateCartValue } from "./updateCartValue.js";
 
 getCartProductFromLS();
 
@@ -49,4 +49,5 @@ export const addToCart = (event, cardValue, stockNumber) => {
     updateCartValue(arrLocalStorageProduct);
 
     showToast("add");
+
 };
