@@ -2,7 +2,7 @@
     {
         "cardValue": 1,
         "category": "laptop",
-        "image": "../public/laptop 2.png",
+        "image": "public/laptop 2.png",
         "name": "Dell E7280",
         "reviews": "(1.3K)",
         "productDesc": "A portable 12.5 business laptop with Intel 7th Gen Core i5/i7, 8GB/16GB DDR4 RAM, and fast SSD storage for reliable on-the-go productivity.",
@@ -13,7 +13,7 @@
     {
         "cardValue": 2,
         "category": "Mobile",
-        "image": "../public/s24.jpg",
+        "image": "public/s24.jpg",
         "name": "Samsung S24 Ultra",
         "reviews": "(2.8K)",
         "productDesc": "A premium smartphone with AMOLED 2X display, powered by the Snapdragon 8 Gen 3. 200MP main camera, 12GB RAM, and a 5000mAh battery.",
@@ -65,4 +65,5 @@
         "actualPrice": "$149.99",
         "stockNumber": "220"
     }
+
 ]
