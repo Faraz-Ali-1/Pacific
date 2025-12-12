@@ -14,7 +14,7 @@ const BASE_PATH = window.location.pathname.endsWith('/Pacific')
     ? window.location.pathname 
     : window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
-const PRODUCT_DATA_PATH = `${BASE_PATH}Pacific/API/products.json`;
+const PRODUCT_DATA_PATH = `${BASE_PATH}/API/products.json`;
 
 
 // 4. New: Create an async function to fetch data and render
