@@ -18,6 +18,19 @@ const atcTemplate = document.getElementById("templateAtc");
 
 
 const showCartProducts = () => {
+
+    const response = await fetch("./API/products.json");
+    const products = await response.json();
+
+    let cartProducts = getCartProductFromLS();
+
+    // 2. Filter the products
+    let filterProducts = products.filter((curProd) => {
+        return cartProducts.some((curElem) => curElem.cardValue === curProd.cardValue);
+    });
+
+    // 3. Render
+
     filterProducts.forEach((curProd) => {
         const {cardValue, category, name, image, discountedPrice, stockNumber} = curProd;
         let productClone = document.importNode(atcTemplate.content, true);
@@ -48,6 +61,7 @@ showCartProducts();
 // -------------------------
 
 updateCartProductTotal();
+
 
 
 
