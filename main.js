@@ -14,7 +14,7 @@ import { ShowProductContainer } from "./HomeProductCard.js";
 //     ? window.location.pathname 
 //     : window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
-const PRODUCT_DATA_PATH = `/API/products.json`;
+const PRODUCT_DATA_PATH = `API/products.json`;
 
 
 // 4. New: Create an async function to fetch data and render
