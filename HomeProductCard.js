@@ -6,7 +6,7 @@ const ProductsContainer = document.getElementById("products-container");
 const productTemplate = document.getElementById("template");
 
 export const ShowProductContainer = (products) => {
-   if (!products || !productTemplate) {
+   if (!products) {
         return false;
 
     products.forEach((curElem) => {
