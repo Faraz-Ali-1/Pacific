@@ -1,4 +1,4 @@
-import products from "./API/products.JSON";
+import products from "API/products.JSON";
 import { fetchfromCartLS } from "./fetchfromCartLS.js";
 import { getCartProductFromLS } from "./getCartProduct.js";
 import { removeProduct } from "./removeProduct.js";
@@ -48,5 +48,6 @@ showCartProducts();
 // -------------------------
 
 updateCartProductTotal();
+
 
 
