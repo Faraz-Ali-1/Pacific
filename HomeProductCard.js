@@ -1,13 +1,13 @@
 import { addToCart } from "./addToCart.js";
 import { quantityToggle } from "./quantityToggle.js";
 
+
 const ProductsContainer = document.getElementById("products-container");
 const productTemplate = document.getElementById("template");
 
 export const ShowProductContainer = (products) => {
-    if (!products) {
+   if (!products || !productTemplate) {
         return false;
-    };
 
     products.forEach((curElem) => {
         const {cardValue, category, image, name, reviews, productDesc, discountedPrice, actualPrice, stockNumber} = curElem;
@@ -42,3 +42,4 @@ export const ShowProductContainer = (products) => {
     });
 
 };
+
