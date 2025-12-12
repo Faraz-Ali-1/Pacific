@@ -24,7 +24,7 @@
     {
         "cardValue": 3,
         "category": "Watch",
-        "image": "../public/watch.jpg",
+        "image": "public/watch.jpg",
         "name": "CASIO G-shock watch ",
         "reviews": "(231)",
         "productDesc": "Reliable and durable timepieces, often featuring digital or analog displays, water resistance, stopwatch, and alarm functions.",
@@ -35,7 +35,7 @@
     {
         "cardValue": 4,
         "category": "Laptop",
-        "image": "../public/macbook.jpg",
+        "image": "public/macbook.jpg",
         "name": "MacBook Pro",
         "reviews": "(1.7K)",
         "productDesc": "high-performance laptop. A stunning Liquid Retina XDR display, up to 128GB memory, and the speed of Apple's M-series chips in aluminum design.",
@@ -46,7 +46,7 @@
     {
         "cardValue": 5,
         "category": "HeadWear",
-        "image": "../public/earbuds blk 2.png",
+        "image": "public/earbuds blk 2.png",
         "name": "earBuds 3s Pro",
         "reviews": "(10.2K)",
         "productDesc": "wireless earbuds powered by the Apple H1/H2 chip for instant pairing. Feature Spatial Audio with dynamic head tracking (3rd Gen) and offer up to 6 hours listening time on a single charge.",
@@ -57,7 +57,7 @@
     {
         "cardValue": 6,
         "category": "HeadWear",
-        "image": "../public/hdphones 2.png",
+        "image": "public/hdphones 2.png",
         "name": "headphones",
         "reviews": "(11.7K)",
         "productDesc": "Immersive sound. Over-ear, on-ear, or in-ear designs, featuring wired or wireless connectivity, noise cancellation, and a typical frequency response of 20Hz-20kHz for rich audio.",
@@ -67,3 +67,4 @@
     }
 
 ]
+
