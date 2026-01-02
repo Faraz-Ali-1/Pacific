@@ -61,6 +61,12 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+.ic-active{
+    display: none;
+}
+.hidden{
+    display: none;
+  }
 
 .logo img{
     width: 11rem;
@@ -720,4 +726,170 @@ footer{
 
   /* ****************** */
   /* toast notification */
-  /* ****************** */
+
+  @media (max-width: 1040px){
+    .main-left .main-line{
+        font-size: 3rem;
+    }
+    .main-left .intro{
+        font-size: 0.9rem;
+    }
+    .why-choose-us{
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    .why-choose-us-sub h2{
+        font-size: 1rem;
+    }
+    .why-choose-us-sub p{
+        font-size: 0.9rem;
+    }
+    .footer-right{
+        flex-wrap: wrap;
+    }
+  } 
+  
+  @media (max-width: 900px){
+    header, .main-container, .sale-container, .quality-container, .products-container, section h1, .why-choose-us, footer, .offer-container{
+        min-width: 100%;
+        padding: 0 1rem;
+    }
+    .main-container{
+        margin-bottom: 4rem;
+    }
+    .main-sub-container{
+        flex-direction: column;
+        text-align: center;
+        gap: 6rem;
+    }
+    .main-left .main-line{
+        font-size: 2.5rem;
+        margin: 2rem 0;
+    }
+    .main-left .intro{
+        text-align: center;
+    }
+    .main-left .dive-in{
+        display: none;
+    }
+    .why-choose-us img{
+        display: none;
+    }
+    .center-img::after{
+        display: none;
+    }
+    .center-img::before{
+        display: none;
+    }
+    .center-img{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .custom-shape-divider-top-1748452212 svg{
+        display: none;
+    }
+    .sale-container{
+        display: none;
+        margin: auto;
+    }
+    .sale-sub-container{
+        width: 100%;
+        display: flex;
+        background-color: #eff4ff;
+    }
+    .products-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 750px){
+    .navbar ul{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .footer-container{
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    .footer-right{
+        justify-content: center;
+    }
+    .logo img{
+        width: 9rem;
+    }
+    .quality-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .products-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .newsletter input{
+        width: 50%;
+    }
+    .logo img{
+        text-align: center;
+        margin: auto;
+    }
+    .navbar ul{
+        padding: 0;
+    }
+    .ic-active{
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .navbar ul{
+        display: flex; 
+        flex-direction: column;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 250px; 
+        height: 100vh; 
+        background-color: #222;
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out; 
+        z-index: 1000;
+        padding-left: 1rem;
+      }
+      .ic-active-cross{
+        display: block;
+        color: rgb(255, 194, 194);
+        font-size: 2rem;
+        z-index: 1001;
+        cursor: pointer;
+      }
+      .navbar ul a{
+        color: white;
+        text-decoration: none;
+      }
+      .navbar ul.active{
+        transform: translateX(0);
+      }
+  }
+@media (max-width: 550px){
+    .products-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .quality-icon{
+        
+        font-size: 1.2rem;
+    }
+    .quality-text h3{
+        
+        font-size: 0.8rem;
+        
+    }
+    .quality-text p{
+        font-size: 0.6rem;
+    }
+    .main-right img{
+        width: 20rem;
+    }
+    .why-choose-us{
+        display: flex;
+        gap: 0rem;
+    }
+}
