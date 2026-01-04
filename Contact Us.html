@@ -78,6 +78,13 @@ header{
     align-items: center;
 }
 
+.ic-active{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+    
 .logo img{
     width: 11rem;
 }
@@ -322,6 +329,106 @@ footer{
 /* ************************ */
 /* footer section ends here */
 /* ************************ */
+
+    @media (max-width: 1000px){
+    header, footer, .offer-container{
+        min-width: 95%;
+        
+    }
+    .cont-section{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    .cont-heading{
+        margin: auto;
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+    }
+    .cont-img{
+        width: 20rem;
+    }
+    .cont-info{
+        margin: auto;
+    }
+    .cont-para{
+        margin: auto;
+    }
+    .cont-info p, .contact_form input, .contact_form textarea{
+        width: 80%;
+    }
+    .contactUs .contact_btn{
+        width: 82%;
+    }
+    hr{
+        width: 30rem;
+    }
+    .contactUs{
+        margin: auto;
+        padding-left: 3rem;
+    }
+    .footer-container{
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    .footer-right{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .footer-right input{
+        width: 60%;
+    }
+
+    .ic-active{
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .navbar ul{
+        display: flex; 
+        flex-direction: column;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 250px; 
+        height: 100vh; 
+        background-color: #222;
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out; 
+        z-index: 1000;
+        padding-left: 1rem;
+      }
+      .ic-active-cross{
+        display: block;
+        color: rgb(255, 194, 194);
+        font-size: 2rem;
+        z-index: 1001;
+        cursor: pointer;
+        margin-bottom: 2rem;
+      }
+      .navbar ul a{
+        color: white;
+        text-decoration: none;
+      }
+      .navbar ul.active{
+        transform: translateX(0);
+      }
+}
+@media (max-width: 500px){
+    .cont-heading{
+        font-size: 2.2rem;
+        padding-left: 1rem;
+    }
+    .cont-info p{
+        font-size: 0.9rem;
+    }
+    hr{
+        width: 15rem;
+    }
+}
   </style>
 
 </head>
@@ -476,3 +583,4 @@ footer{
 </body>
 
 </html>
+
