@@ -135,6 +135,13 @@
     cursor: pointer;
 }
 
+.ic-active{
+    display: none;
+}
+.hidden{
+    display: none;
+}     
+    
 /* ************* */
 /* cart checkout */
 /* ************* */
@@ -186,12 +193,99 @@
     opacity: 1;
     transform: translatex(0);
   }
-}
+}    
 
 /* ************* */
 /* cart checkout */
 /* ************* */
 
+    /* media queries */
+@media (max-width: 900px) {
+    .main-section{
+        min-width: 95%;
+        margin: 5rem auto;
+    }
+    .name-atc{
+      margin-right: 0rem;
+      text-align: center;
+    }
+    .cart-chekcout{
+      min-width: 95%;
+      padding: 0 1rem;
+    }
+    .productTemplate-atc{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+.category-atc{
+    font-size: 0.5rem;
+    margin: auto;
+    padding: 0.2rem 0.8rem;
+    display: none;
+}
+.image-atc{
+    width: 3rem;
+    height: 3rem;
+}
+.name-cnt{
+  min-width: 10rem;
+  width: 14rem;
+}
+.name-atc{
+    font-size: 0.8rem;
+}
+.quantityElem-atc{
+  margin-bottom: 1rem;
+}
+.discountedPrice-atcContainer{
+  width: 90%;
+}
+.discountedPrice-atc{
+  color: rgb(100, 100, 100);
+  font-size: 0.8rem;
+}
+.ic-active{
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .navbar ul{
+        display: flex; 
+        flex-direction: column;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 250px; 
+        height: 100vh; 
+        background-color: #222;
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out; 
+        z-index: 1000;
+        padding-left: 1rem;
+      }
+      .ic-active-cross{
+        display: block;
+        color: rgb(255, 194, 194);
+        font-size: 2rem;
+        z-index: 1001;
+        cursor: pointer;
+        margin-bottom: 2rem;
+      }
+      .navbar ul a{
+        color: white;
+        text-decoration: none;
+      }
+      .navbar ul.active{
+        transform: translateX(0);
+      }
+
+}    
+    
 </style>
 
 </head>
@@ -355,10 +449,15 @@
     </div>
   </footer>
 
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
   <script type="module" src="./showAddToCart.js"></script>
   
 </body>
 
 </html>
+
 
 
