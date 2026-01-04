@@ -751,7 +751,7 @@ footer{
   
   @media (max-width: 900px){
     header, .main-container, .sale-container, .quality-container, .products-container, section h1, .why-choose-us, footer, .offer-container{
-        min-width: 100%;
+        min-width: 97%;
         padding: 0 1rem;
     }
     .main-container{
@@ -825,7 +825,7 @@ footer{
         grid-template-columns: repeat(2, 1fr);
     }
     .newsletter input{
-        width: 50%;
+        width: 60%;
     }
     .logo img{
         text-align: center;
@@ -888,8 +888,30 @@ footer{
     .main-right img{
         width: 20rem;
     }
-    .why-choose-us{
-        display: flex;
+     .why-choose-us{
+        display: block;
+        margin: auto;
         gap: 0rem;
+        margin-bottom: 5rem;
+        padding-left: 2rem;
+        padding-right: 0;
+    }
+    .animate{
+        font-size: 2.5rem;
+    }
+    .main-heading h1{
+        font-size: 2.5rem;
     }
 }
+
+@media (max-width: 400px){
+    .footer-left img.payment{
+        width: 12rem;
+    }
+    header, .main-container, .sale-container, .quality-container, .products-container, section h1, .why-choose-us, footer, .offer-container{
+        min-width: 95%; 
+        padding: 0 1rem;
+    }
+}
+
+  
